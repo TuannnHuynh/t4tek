@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/rest.css">
+    <link rel="stylesheet" href="public/css/course.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <title>Khóa ngắn hạn - T4Tek</title>
+</head>
+
+<body>
+    <header class="pt-1 pt-xxl-0">
+        <nav class="navbar navbar-expand-xxl">
+            <div class="container-fluid container-xxl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-navbar"
+                    aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a class="navbar-brand d-xxl-none" href="index.html">T4Tek</a>
+                <div class="d-none d-xxl-flex align-items-xxl-center">
+                    <a class="navbar-brand me-4" href="index.html">T4Tek</a>
+                    <ul class="navbar navbar-nav d-none d-xxl-flex ms-4">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link">
+                                <i class=" fa-solid fa-book me-1"></i>Các khoá học<i
+                                    class="ms-1 fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu lesson" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Khóa ngắn hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa dài hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa video</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa trẻ em 8 - 17 tuổi</a></li>
+                                <li><a class="dropdown-item" href="#">Tất cả khóa học</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-4">
+                                <i class="fa-solid fa-location-dot me-1"></i>Địa điểm học<i
+                                    class="fa-solid fa-angle-down ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu location">
+                                <li><a class="dropdown-item" href="#">TP.Hồ Chí Minh</a></li>
+                                <li><a class="dropdown-item" href="#">Hà Nội</a></li>
+                                <li><a class="dropdown-item" href="#">Remote Teaching</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="me-1 fa-regular fa-file-lines"></i>Bài viết</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="cart d-xxl-none">
+                    <a href="">
+                        <span><i class="fa-solid fa-cart-shopping"></i></span>
+                        <span class="cart-quantity">0</span>
+                    </a>
+                </div>
+                <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="top-navbar">
+                    <div class="offcanvas-header d-flex justify-content-between align-items-center">
+                        <h2 class="p-2">T4Tek</h2>
+                        <button class="p-2" type="button" data-bs-toggle="offcanvas"><i
+                                class="fa-solid fa-x"></i></button>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class=" fa-solid fa-book me-2"></i>Các khoá học<i
+                                    class="float-end mt-2 fs-6 fa-solid fa-plus"></i>
+                            </a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="khoa-hoc-ngan.html">Khóa ngắn hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa dài hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa video</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa trẻ em 8 - 17 tuổi</a></li>
+                                <li><a class="dropdown-item" href="#">Tất cả khóa học</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-location-dot me-2"></i>Địa điểm học<i
+                                    class="float-end mt-2 fs-6 fa-solid fa-plus"></i>
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item" href="#">TP.Hồ Chí Minh</a></li>
+                                <li><a class="dropdown-item" href="#">Hà Nội</a></li>
+                                <li><a class="dropdown-item" href="#">Remote Teaching</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="me-2 fa-regular fa-file-lines"></i>Bài viết</a>
+                        </li>
+                        <a href="tao-tai-khoan.html" class="create"><i class="fa-solid fa-user-plus"></i>Tạo tài
+                            khoản</a>
+                        <a href="/login.html" class="login"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng
+                            nhập</a>
+                        <div class="search-offcanvas">
+                            <form action="" class="d-flex">
+                                <input type="text" placeholder="Tìm kiếm khoá học ...">
+                                <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="d-none justify-content-xxl-around d-xxl-flex">
+                    <div class="search d-flex me-4">
+                        <div class="input-group">
+                            <form action="">
+                                <input type="text" placeholder="Tìm kiếm khoá học ...">
+                                <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="group d-flex align-items-center ms-4">
+                        <div class="login">
+                            <a class="me-4" href="login.html"><i
+                                    class="me-1 fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</a>
+                        </div>
+                        <div class="create-user">
+                            <a class="me-4" href="tao-tai-khoan.html"><i class="me-1 fa-solid fa-user-plus"></i>Tạo tài
+                                khoản</a>
+                        </div>
+                        <div class="cart">
+                            <a href="">
+                                <span><i class="fa-solid fa-cart-shopping"></i></span>
+                                <span class="cart-quantity">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="course">
+            <div class="container">
+                <ul class="course-link d-flex align-items-center">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li>Khóa ngắn hạn</li>
+                </ul>
+                <div class="course-filter row">
+                    <div class="col-12 col-xxl-4 d-flex justify-content-around">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Khoá ngắn hạn
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a href="khoa-hoc-ngan.html">Khoá ngắn hạn</a></li>
+                                <li><a href="">Khoá dài hạn</a></li>
+                                <li><a href="">Tất cả khoá học</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Tất cả các địa điểm
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a href="">Tất cả địa điểm</a></li>
+                                <li><a href="">TP. Hồ Chí Minh</a></li>
+                                <li><a href="">Hà Nội</a></li>
+                                <li><a href="">Remote Teaching</a></li>
+                                <li><a href="">Online Video</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-category col-12 col-xxl-8 mt-3 mt-md-0">
+                        <ul class="d-flex flex-wrap">
+                            <li class="btn-animate me-2 mt-md-0">Graphic Design</li>
+                            <li class="btn-animate me-2 mt-md-0">3D</li>
+                            <li class="btn-animate me-2 mt-2 mt-md-0">Motion & Animation</li>
+                            <li class="btn-animate me-2 mt-2 mt-md-0">Hậu Kỳ Phim - Video</li>
+                            <li class="btn-animate me-2 mt-2 mt-md-0">Digital Painting</li>
+                            <li class="btn-animate me-2 mt-2 mt-2">UI/UX</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row course-list">
+                    <div class="card col-md-4">
+                        <div class="card-content">
+                            <img src="https://service.keyframe.vn/uploads/filecloud/2021/August/11/1318-413971628617095-1628617095.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Khóa học 2D Animation & Motion Graphics Basic to Intermediate
+                                </h5>
+                                <p class="card-text">
+                                    Ngày khai giảng: <strong>10/02/2025</strong><br>
+                                    Trình độ: <strong>Cơ bản - Trung cấp</strong><br>
+                                    Lịch học: <strong>Thứ 2, Thứ 6</strong><br>
+                                    Giờ học: <strong>18:45 - 21:30</strong><br>
+                                </p>
+                                <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                            <div class="card-footer">
+                                Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="card-content">
+                            <img src="https://service.keyframe.vn/uploads/filecloud/2018/February/8/22-958191518079376-1518079376.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Khoá học Photoshop Basic</h5>
+                                <p class="card-text">
+                                    Ngày khai giảng: <strong>10/02/2025</strong><br>
+                                    Trình độ: <strong>Cơ bản</strong><br>
+                                    Lịch học: <strong>Thứ 2, Thứ 4</strong><br>
+                                    Giờ học: <strong>19:00 - 21:00</strong><br>
+                                </p>
+                                <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                            <div class="card-footer">
+                                Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="card-content">
+                            <img src="https://service.keyframe.vn/uploads/filecloud/2023/October/27/7331-MD056-Banner-UXUI%20Product%20Design-R04-1280x720.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Khóa Học Thiết Kế UXUI Product Design</h5>
+                                <p class="card-text">Ngày khai giảng: <strong>10/02/2025</strong><br>
+                                    Trình độ: <strong>Cơ bản - Trung cấp</strong><br>
+                                    Lịch học: <strong>Thứ 2, Thứ 4, Thứ 6</strong><br>
+                                    Giờ học: <strong>19:00 - 21:30</strong><br></p>
+                                <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                            <div class="card-footer">
+                                Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="card-content">
+                            <img src="https://service.keyframe.vn/uploads/filecloud/2023/October/1/7026-MD053-Baner-1280x720-Figma-UI-Design-R03.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Khóa học Figma UI Design</h5>
+                                <p class="card-text">Ngày khai giảng: <strong>11/02/2025</strong><br>
+                                    Trình độ: <strong>Cơ bản - Trung cấp</strong><br>
+                                    Lịch học: <strong>Thứ 3, Thứ 5, Thứ 7</strong><br>
+                                    Giờ học: <strong>18:30 - 21:00</strong><br></p>
+                                <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                            <div class="card-footer">
+                                Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="card-content">
+                            <img src="https://service.keyframe.vn/uploads/filecloud/2022/July/7/2455-563151657166134-1657166134.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Khóa học Dựng Phim Premiere</h5>
+                                <p class="card-text">Ngày khai giảng: <strong>11/02/2025</strong><br>
+                                    Trình độ: <strong>Cơ bản - Trung cấp</strong><br>
+                                    Lịch học: <strong>Thứ 3, Thứ 5</strong><br>
+                                    Giờ học: <strong>19:00 - 21:00</strong><br></p>
+                                <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                            <div class="card-footer">
+                                Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="card-content">
+                            <img src="https://service.keyframe.vn/uploads/filecloud/2022/October/6/3259-289051665032362-1665032362.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Khóa học Illustrator Graphics Basic to Intermediate</h5>
+                                <p class="card-text">
+                                    Ngày khai giảng: <strong>12/02/2025</strong><br>
+                                    Trình độ: <strong>Cơ bản - Trung cấp</strong><br>
+                                    Lịch học: <strong>Thứ 4, Thứ 7</strong><br>
+                                    Giờ học: <strong>18:30 - 21:00</strong><br>
+                                </p>
+                                <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                            <div class="card-footer">
+                                Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="card-content">
+                            <img src="https://service.keyframe.vn/uploads/filecloud/2018/April/25/72-559201524659628-1524659628.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Khóa học Nhiếp Ảnh Photography</h5>
+                                <p class="card-text">Ngày khai giảng: <strong>12/02/2025</strong><br>
+                                    Trình độ: <strong>Cơ bản</strong><br>
+                                    Lịch học: <strong>Thứ 4, Thứ 7</strong><br>
+                                    Giờ học: <strong>18:30 - 20:30</strong><br></p>
+                                <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                            <div class="card-footer">
+                                Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="card-content">
+                            <img src="https://service.keyframe.vn/uploads/filecloud/2021/May/20/1023-740721621505324-1621505324.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Khóa học thiết kế Photoshop Digital Imaging</h5>
+                                <p class="card-text">Ngày khai giảng: <strong>17/02/2025</strong><br>
+                                    Trình độ: <strong>Nâng cao</strong><br>
+                                    Lịch học: <strong>Thứ 2, Thứ 6</strong><br>
+                                    Giờ học: <strong>19:00 - 21:30</strong><br></p>
+                                <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                            <div class="card-footer">
+                                Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="card-content">
+                            <img src="https://service.keyframe.vn/uploads/filecloud/2021/September/20/1377-362321632109505-1632109505.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Khoá học After Effects Hiệu Ứng Motion</h5>
+                                <p class="card-text">Ngày khai giảng: <strong>18/02/2025</strong><br>
+                                    Trình độ: <strong>Cơ bản - Trung cấp</strong><br>
+                                    Lịch học: <strong>Thứ 3, Thứ 5</strong><br>
+                                    Giờ học: <strong>18:30 - 21:00</strong><br></p>
+                                <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                            <div class="card-footer">
+                                Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="first-column col-12 col-md-6 mb-4 mb-md-0">
+                    <h5>T4TEK MULTIMEDIA SCHOOL</h5>
+                    <p class="mb-2">
+                        Trụ sở chính: L18-11-13, Tầng 18 Tòa nhà Vincom Center Đồng Khởi, Số 72 Lê Thánh Tôn, Phường Bến
+                        Nghé, Quận 1, Thành phố Hồ Chí Minh.<br>
+                        Văn phòng: 287/54, Phường 2, Quận 8, Thành phố Hồ Chí Minh.<br>
+                        Giờ làm việc: Thứ 2 - Thứ 7: 8h00 - 17h00<br>
+                        Điện thoại: 0965643046<br>
+                        Email: contact@t4tek.co
+                    </p>
+                    <p><a href="">Chính sách bảo mật thông tin</a></p>
+                    <div class="img-bct">
+                        <img src="https://keyframe.vn/img/dathongbao.png" alt="">
+                    </div>
+                </div>
+                <div class="second-column col-12 col-md-3">
+                    <h5>THÔNG TIN</h5>
+                    <ul>
+                        <li><a href="">Lịch khai giảng</a></li>
+                        <li><a href="">Giảng viên là ai?</a></li>
+                        <li><a href="">Tác phẩm học viên</a></li>
+                        <li><a href="">Cảm nhận từ học viên</a></li>
+                        <li><a href="">Giới thiệu về Keyframe</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="third-column col-12 col-md-3">
+                    <h5>FOLLOW T4TEK</h5>
+                    <ul>
+                        <li><a href=""><img src="https://keyframe.vn/img/facebook-f-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/youtube-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/instagram-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/tiktok-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/behance-brands-48.svg"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="public/js/main.js"></script>
+
+</html>
