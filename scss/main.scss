@@ -18,6 +18,7 @@ main {
 }
 
 .btn-animate,
+.thumbnail-animate,
 .card-animate {
   transition: 0.5s ease;
   &:hover {
@@ -554,38 +555,36 @@ main {
   }
 }
 
-.blogs {
-  .blog-list {
-    .col-md-4 {
-      padding: 15px 30px;
-      .card {
-        img {
-          border-top-left-radius: 8px;
-          border-top-right-radius: 8px;
+.blog-list {
+  .col-md-4 {
+    padding: 15px 30px;
+    .card {
+      img {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      border-radius: 8px;
+      .card-body {
+        padding: 20px;
+        .card-title {
+          font-size: 20px;
+          color: #333;
+          font-weight: 500;
         }
-        border-radius: 8px;
-        .card-body {
-          padding: 20px;
-          .card-title {
-            font-size: 20px;
-            color: #333;
+        .card-text {
+          color: #666;
+          line-height: 1.3;
+          margin-bottom: 15px;
+          font-weight: 400;
+        }
+        .catagories {
+          span {
+            display: inline-block;
+            padding: 3px 10px;
+            font-size: 14px;
+            border-radius: 11px;
+            margin-bottom: 5px;
             font-weight: 500;
-          }
-          .card-text {
-            color: #666;
-            line-height: 1.3;
-            margin-bottom: 15px;
-            font-weight: 400;
-          }
-          .catagories {
-            span {
-              display: inline-block;
-              padding: 3px 10px;
-              font-size: 14px;
-              border-radius: 11px;
-              margin-bottom: 5px;
-              font-weight: 500;
-            }
           }
         }
       }

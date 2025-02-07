@@ -20,10 +20,12 @@ main {
 }
 
 .btn-animate,
+.thumbnail-animate,
 .card-animate {
   transition: 0.5s ease;
 }
 .btn-animate:hover,
+.thumbnail-animate:hover,
 .card-animate:hover {
   transform: translateY(-5px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -553,31 +555,31 @@ main .banner-fourth .banner-item {
   color: #219653;
 }
 
-.blogs .blog-list .col-md-4 {
+.blog-list .col-md-4 {
   padding: 15px 30px;
 }
-.blogs .blog-list .col-md-4 .card {
+.blog-list .col-md-4 .card {
   border-radius: 8px;
 }
-.blogs .blog-list .col-md-4 .card img {
+.blog-list .col-md-4 .card img {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-.blogs .blog-list .col-md-4 .card .card-body {
+.blog-list .col-md-4 .card .card-body {
   padding: 20px;
 }
-.blogs .blog-list .col-md-4 .card .card-body .card-title {
+.blog-list .col-md-4 .card .card-body .card-title {
   font-size: 20px;
   color: #333;
   font-weight: 500;
 }
-.blogs .blog-list .col-md-4 .card .card-body .card-text {
+.blog-list .col-md-4 .card .card-body .card-text {
   color: #666;
   line-height: 1.3;
   margin-bottom: 15px;
   font-weight: 400;
 }
-.blogs .blog-list .col-md-4 .card .card-body .catagories span {
+.blog-list .col-md-4 .card .card-body .catagories span {
   display: inline-block;
   padding: 3px 10px;
   font-size: 14px;

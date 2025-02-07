@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/rest.css">
+    <link rel="stylesheet" href="public/css/blog.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <title>Bài viết</title>
+</head>
+
+<body>
+    <header class="pt-1 pt-xxl-0">
+        <nav class="navbar navbar-expand-xxl">
+            <div class="container-fluid container-xxl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-navbar"
+                    aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a class="navbar-brand d-xxl-none" href="/index.html">T4Tek</a>
+                <div class="d-none d-xxl-flex align-items-xxl-center">
+                    <a class="navbar-brand me-4" href="/index.html">T4Tek</a>
+                    <ul class="navbar navbar-nav d-none d-xxl-flex ms-4">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link">
+                                <i class=" fa-solid fa-book me-1"></i>Các khoá học<i
+                                    class="ms-1 fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu lesson" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Khóa ngắn hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa dài hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa video</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa trẻ em 8 - 17 tuổi</a></li>
+                                <li><a class="dropdown-item" href="#">Tất cả khóa học</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-4">
+                                <i class="fa-solid fa-location-dot me-1"></i>Địa điểm học<i
+                                    class="fa-solid fa-angle-down ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu location">
+                                <li><a class="dropdown-item" href="#">TP.Hồ Chí Minh</a></li>
+                                <li><a class="dropdown-item" href="#">Hà Nội</a></li>
+                                <li><a class="dropdown-item" href="#">Remote Teaching</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="me-1 fa-regular fa-file-lines"></i>Bài viết</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="cart d-xxl-none">
+                    <a href="">
+                        <span><i class="fa-solid fa-cart-shopping"></i></span>
+                        <span class="cart-quantity">0</span>
+                    </a>
+                </div>
+                <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="top-navbar">
+                    <div class="offcanvas-header d-flex justify-content-between align-items-center">
+                        <h2 class="p-2">T4Tek</h2>
+                        <button class="p-2" type="button" data-bs-toggle="offcanvas"><i
+                                class="fa-solid fa-x"></i></button>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class=" fa-solid fa-book me-2"></i>Các khoá học<i
+                                    class="float-end mt-2 fs-6 fa-solid fa-plus"></i>
+                            </a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="khoa-hoc-ngan.html">Khóa ngắn hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa dài hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa video</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa trẻ em 8 - 17 tuổi</a></li>
+                                <li><a class="dropdown-item" href="#">Tất cả khóa học</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-location-dot me-2"></i>Địa điểm học<i
+                                    class="float-end mt-2 fs-6 fa-solid fa-plus"></i>
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item" href="#">TP.Hồ Chí Minh</a></li>
+                                <li><a class="dropdown-item" href="#">Hà Nội</a></li>
+                                <li><a class="dropdown-item" href="#">Remote Teaching</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="me-2 fa-regular fa-file-lines"></i>Bài viết</a>
+                        </li>
+                        <a href="tao-tai-khoan.html" class="create"><i class="fa-solid fa-user-plus"></i>Tạo tài
+                            khoản</a>
+                        <a href="login.html" class="login"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng
+                            nhập</a>
+                        <div class="search-offcanvas">
+                            <form action="" class="d-flex">
+                                <input type="text" placeholder="Tìm kiếm khoá học ...">
+                                <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="d-none justify-content-xxl-around d-xxl-flex">
+                    <div class="search d-flex me-4">
+                        <div class="input-group">
+                            <form action="">
+                                <input type="text" placeholder="Tìm kiếm khoá học ...">
+                                <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="group d-flex align-items-center ms-4">
+                        <div class="login">
+                            <a class="me-4" href="login.html"><i
+                                    class="me-1 fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</a>
+                        </div>
+                        <div class="create-user">
+                            <a class="me-4" href="tao-tai-khoan.html"><i class="me-1 fa-solid fa-user-plus"></i>Tạo tài
+                                khoản</a>
+                        </div>
+                        <div class="cart">
+                            <a href="">
+                                <span><i class="fa-solid fa-cart-shopping"></i></span>
+                                <span class="cart-quantity">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="blog">
+            <div class="container">
+                <ul class="blog-link d-flex align-items-center">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li>Khóa ngắn hạn</li>
+                </ul>
+                <div class="blog-featured">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Bài viết nổi bật</h2>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="thumbnail thumbnail-animate">
+                                <a href="">
+                                    <img src="https://service.keyframe.vn/uploads/filecloud/2023/August/2/6347-Hoc-vien-keyframe-review-thu-vien-video-bai-hoc-keyframe-1080x1080.jpg"
+                                        alt="">
+                                    <h2>Review thư viện video bài học online được hỗ trợ khi học Offline/ Remote tại
+                                        Keyframe</h2>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-animate">
+                                <a href="">
+                                    <img src="https://service.keyframe.vn/uploads/filecloud/2023/June/3/5364-16-bai-uxui-thieu-nhi-danh-cho-nguoi-moi-hoc.jpeg"
+                                        class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="">16 bài UX/UI thiếu nhi dành cho người mới học</a>
+                                    </h5>
+                                    <p class="card-text">Các bài bài viết kiến thức UX/UI tiếng Việt, được biên tập và
+                                        tổng hợp bởi Đội ngũ Keyframe cùng các Giảng viên Keyframe. Hy vọng sẽ giúp ích
+                                        được phần nào trong những bước đầu chinh phục lĩnh vực UI/UX</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="blog-recent">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Bài viết gần đây</h2>
+                        </div>
+                    </div>
+                    <div class="row filter">
+                        <div class="col-12 btn-group">
+                            <button class="active">Tất cả</button>
+                            <button class="btn-animate">Hậu Kỳ Phim</button>
+                            <button class="btn-animate">Graphic Design</button>
+                            <button class="btn-animate">UI/UX</button>
+                            <button class="btn-animate">Digital Painiting</button>
+                            <button class="btn-animate">Animation/ Motion Graphic</button>
+                        </div>
+                        <div class="col-12 search">
+                            <div class="input-group">
+                                <input class="col-sm-3 my-1" type=" text" placeholder="Tìm kiếm bài viết ...">
+                                <button class="btn-search col-auto my-1"><i class="fa-solid fa-magnifying-glass"></i>Tìm
+                                    kiếm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row blog-list">
+                    <div class="col-md-4">
+                        <div class="card card-animate">
+                            <a href="">
+                                <img src="https://service.keyframe.vn/uploads/filecloud/2023/August/2/6347-Hoc-vien-keyframe-review-thu-vien-video-bai-hoc-keyframe-1080x1080.jpg"
+                                    class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Review thư viện video bài học online được hỗ trợ khi học
+                                    Offline/
+                                    Remote tại Keyframe</h5>
+                                <p class="card-text">Học tại Keyframe bạn được hỗ trợ bộ thư viện video bài học
+                                    online.
+                                    Giúp không bỏ sót bất cứ kiến thức nào dù có vắng học!</p>
+                                <div class="catagories">
+                                    <span class="badge-blue"><a href="">Quy định học tập</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-animate">
+                            <a href="">
+                                <img src="https://service.keyframe.vn/uploads/filecloud/2023/June/3/5364-16-bai-uxui-thieu-nhi-danh-cho-nguoi-moi-hoc.jpeg"
+                                    class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">16 bài UX/UI thiếu nhi dành cho người mới học</h5>
+                                <p class="card-text">Các bài bài viết kiến thức UX/UI tiếng Việt, được biên tập và
+                                    tổng
+                                    hợp bởi Đội ngũ Keyframe cùng các Giảng viên Keyframe. Hy vọng sẽ giúp ích được
+                                    phần
+                                    nào trong những bước đầu chinh phục lĩnh vực UI/UX</p>
+                                <div class="catagories">
+                                    <span class="badge-blue"><a href="">UI/UX</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-animate">
+                            <a href="">
+                                <img src="https://service.keyframe.vn/uploads/filecloud/2025/January/2/10488-banner-uu-dai-tet-2025-1280x720.png"
+                                    class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">KEYFRAME GIẢM ĐẾN 30% HỌC PHÍ các khóa học Design &
+                                    Multimedia
+                                    khai giảng sau Tết Nguyên Đán 2025</h5>
+                                <p class="card-text">KEYFRAME GIẢM ĐẾN 30% HỌC PHÍ các khóa học Design & Multimedia
+                                    khai
+                                    giảng sau Tết Nguyên Đán 2025</p>
+                                <div class="catagories">
+                                    <span class="badge-blue"><a href="">Graphic Design</a></span>
+                                    <span class="badge-yellow"><a href="">UI/UX</a></span>
+                                    <span class="badge-green"><a href="">Animation/ Motion Graphic</a></span>
+                                    <span class="badge-blue"><a href="">Digital Painiting</a></span>
+                                    <span class="badge-yellow"><a href="">Hậu Kỳ Phim</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-animate">
+                            <a href="">
+                                <img src="https://service.keyframe.vn/uploads/filecloud/2024/December/20/10420-webinar-suc-anh-huong-cua-3d-motion-design-trong-nganh-cong-nghiep-sang-tao.png"
+                                    class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Webinar - Sức ảnh hưởng của 3D Motion Design trong ngành công
+                                    nghiệp sáng tạo</h5>
+                                <p class="card-text">Mời bạn tham dự Webinar - Sức ảnh hưởng của 3D Motion Design
+                                    trong
+                                    ngành công nghiệp sáng tạo diễn ra vào 19h Thứ 5, ngày 26/12/2024 do Keyframe tổ
+                                    chức trên Google Meet.</p>
+                                <div class="catagories">
+                                    <span class="badge-blue"><a href="">Animation/ Motion Graphic</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-animate">
+                            <a href="">
+                                <img src="https://service.keyframe.vn/uploads/filecloud/2024/December/6/10307-chin-chu-duc-tinh-can-co-cua-designer-editor-01.png"
+                                    class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Chỉn chu - Đức tính cần có của Designer, Editor</h5>
+                                <p class="card-text">Đức tính cần có của Designer, Editor là gì? Bất cứ công việc
+                                    nào
+                                    thì cũng cần những phẩm chất phù hợp với nghề. Hãy cùng Keyframe khám phá xem
+                                    Designer, Editor cần đức tính gì nhé.</p>
+                                <div class="catagories">
+                                    <span class="badge-blue"><a href="">Graphic Design</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-animate">
+                            <a href="">
+                                <img src="https://service.keyframe.vn/uploads/filecloud/2024/November/26/10255-webinar-design-system-vai-tro-&-loi-ich-cua-design-system-trong-thiet-ke-uiux.png"
+                                    class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Webinar - Vai trò và lợi ích của Design System trong thiết kế
+                                    UI/UX</h5>
+                                <p class="card-text">Mời bạn tham dự Webinar - Vai trò và lợi ích của Design System
+                                    trong thiết kế UI/UX diễn ra vào 19h Thứ 3, ngày 03/12/2024 do Keyframe tổ chức
+                                    trên
+                                    Google Meet.</p>
+                                <div class="catagories">
+                                    <span class="badge-blue"><a href="">UI/UX</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
+                                    class="fa-solid fa-angle-left"></i></a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="first-column col-12 col-md-6 mb-4 mb-md-0">
+                    <h5>T4TEK MULTIMEDIA SCHOOL</h5>
+                    <p class="mb-2">
+                        Trụ sở chính: L18-11-13, Tầng 18 Tòa nhà Vincom Center Đồng Khởi, Số 72 Lê Thánh Tôn, Phường Bến
+                        Nghé, Quận 1, Thành phố Hồ Chí Minh.<br>
+                        Văn phòng: 287/54, Phường 2, Quận 8, Thành phố Hồ Chí Minh.<br>
+                        Giờ làm việc: Thứ 2 - Thứ 7: 8h00 - 17h00<br>
+                        Điện thoại: 0965643046<br>
+                        Email: contact@t4tek.co
+                    </p>
+                    <p><a href="">Chính sách bảo mật thông tin</a></p>
+                    <div class="img-bct">
+                        <img src="https://keyframe.vn/img/dathongbao.png" alt="">
+                    </div>
+                </div>
+                <div class="second-column col-12 col-md-3">
+                    <h5>THÔNG TIN</h5>
+                    <ul>
+                        <li><a href="">Lịch khai giảng</a></li>
+                        <li><a href="">Giảng viên là ai?</a></li>
+                        <li><a href="">Tác phẩm học viên</a></li>
+                        <li><a href="">Cảm nhận từ học viên</a></li>
+                        <li><a href="">Giới thiệu về T4Tek</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="third-column col-12 col-md-3">
+                    <h5>FOLLOW T4TEK</h5>
+                    <ul>
+                        <li><a href=""><img src="https://keyframe.vn/img/facebook-f-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/youtube-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/instagram-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/tiktok-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/behance-brands-48.svg"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="public/js/main.js"></script>
+
+</html>
