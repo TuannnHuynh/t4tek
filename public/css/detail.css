@@ -186,4 +186,90 @@ h2 {
 .program-package .program-item .order p .discount-percent {
   color: red;
   font-weight: 700;
+}
+.program-package .program-item .location .items .item {
+  padding: 7px 40px;
+  line-height: 26px;
+  border: 1px solid #fff;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
+  border-radius: 5px;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+}
+.program-package .program-item .location .items .item .tick {
+  display: none;
+  position: absolute;
+  bottom: -12%;
+  right: 2px;
+  font-size: 15px;
+  color: #fff;
+}
+.program-package .program-item .location .items .active {
+  background-color: #f0f0f0;
+  color: #666;
+  position: relative;
+}
+.program-package .program-item .location .items .active::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  transform: rotate(-45deg);
+  bottom: -9%;
+  right: -13px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #22cc9d;
+}
+.program-package .program-item .location .items .active .tick {
+  display: block;
+}
+.program-package .program-item .register button {
+  background-color: #f0f0f0;
+  color: #666;
+  padding: 11px 40px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 13px 0;
+  border: 1px;
+  font-weight: 600;
+}
+.program-package .program-item .register .btn-booking {
+  background-color: #22cc9d;
+  color: #fff;
+}
+@media (max-width: 425px) {
+  .program-package .program-item .register button {
+    font-size: 14px;
+  }
+}
+
+.program-faq .faq-content .content {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 10px;
+}
+.program-faq .faq-content .content ul li {
+  border-bottom: 1px solid #999;
+  padding: 22px 0;
+  position: relative;
+}
+.program-faq .faq-content .content ul li:nth-last-child(1) {
+  border-bottom: none;
+}
+.program-faq .faq-content .content ul li .title-content {
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+}
+.program-faq .faq-content .content ul li .main-content {
+  margin-top: 20px;
+  display: none;
+}
+.program-faq .faq-content .content ul li .main-content p {
+  color: #666;
+  margin: 0 0 10px 0;
 }/*# sourceMappingURL=detail.css.map */

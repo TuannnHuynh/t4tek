@@ -380,27 +380,33 @@ main .banner-fourth .banner-item {
   border: none;
 }
 
+.program-gallery,
 .gallery {
   padding: 30px 0;
 }
+.program-gallery .gallery-list .title-gallery,
 .gallery .gallery-list .title-gallery {
   margin-bottom: 20px;
 }
+.program-gallery .gallery-list .card,
 .gallery .gallery-list .card {
   background-color: #edeff0;
   border: none;
   padding: 18.5px;
 }
+.program-gallery .gallery-list .card img,
 .gallery .gallery-list .card img {
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   cursor: pointer;
 }
+.program-gallery .gallery-list .card .card-content,
 .gallery .gallery-list .card .card-content {
   background-color: #fff;
   border-radius: 8px;
   position: relative;
 }
+.program-gallery .gallery-list .card .card-content .view,
 .gallery .gallery-list .card .card-content .view {
   position: absolute;
   padding: 5px;
@@ -412,21 +418,26 @@ main .banner-fourth .banner-item {
   font-size: 14px;
   line-height: 1;
 }
+.program-gallery .gallery-list .card .card-content .view i,
 .gallery .gallery-list .card .card-content .view i {
   margin-right: 4px;
 }
+.program-gallery .gallery-list .card .card-content .card-body,
 .gallery .gallery-list .card .card-content .card-body {
   padding: 10px;
 }
+.program-gallery .gallery-list .card .card-content .card-body .card-title,
 .gallery .gallery-list .card .card-content .card-body .card-title {
   color: #333;
   font-size: 16px;
   margin-bottom: 5px;
 }
+.program-gallery .gallery-list .card .card-content .card-body .card-text,
 .gallery .gallery-list .card .card-content .card-body .card-text {
   color: #666;
   margin-bottom: 5px;
 }
+.program-gallery .gallery-list .card .card-content .card-body a,
 .gallery .gallery-list .card .card-content .card-body a {
   color: #a3a3a3;
   -webkit-text-decoration: revert;
@@ -434,6 +445,7 @@ main .banner-fourth .banner-item {
   font-size: 14px;
   transition: 0.4s all linear;
 }
+.program-gallery .gallery-list .card .card-content .card-body a:hover,
 .gallery .gallery-list .card .card-content .card-body a:hover {
   color: #1c536f;
 }
@@ -463,12 +475,15 @@ main .banner-fourth .banner-item {
   margin: 0;
 }
 
+.program-comment,
 .comment {
   padding: 30px 0;
 }
+.program-comment .title-comment,
 .comment .title-comment {
   margin-bottom: 20px;
 }
+.program-comment .comment-list,
 .comment .comment-list {
   padding: 24px;
   background-color: #fff;
@@ -477,10 +492,12 @@ main .banner-fourth .banner-item {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   max-width: 545px;
 }
+.program-comment .comment-list .comment-item,
 .comment .comment-list .comment-item {
   padding: 10px 0;
   display: flex;
 }
+.program-comment .comment-list .comment-item img,
 .comment .comment-list .comment-item img {
   border-radius: 50%;
   width: 60px;
@@ -488,9 +505,11 @@ main .banner-fourth .banner-item {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.program-comment .comment-list .comment-item .comment-content,
 .comment .comment-list .comment-item .comment-content {
   padding-left: 10px;
 }
+.program-comment .comment-list .comment-item .comment-content .comment-by,
 .comment .comment-list .comment-item .comment-content .comment-by {
   width: 100%;
   font-weight: 600;
@@ -498,20 +517,24 @@ main .banner-fourth .banner-item {
   font-size: 16px;
   line-height: 1.3;
 }
+.program-comment .comment-list .comment-item .comment-content .comment-by span,
 .comment .comment-list .comment-item .comment-content .comment-by span {
   color: #888;
   font-weight: 500;
   text-align: left;
 }
+.program-comment .comment-list .comment-item .comment-content .comment-course a,
 .comment .comment-list .comment-item .comment-content .comment-course a {
   -webkit-text-decoration: revert;
           text-decoration: revert;
   color: #a3a3a3;
   font-size: 14px;
 }
+.program-comment .comment-list .comment-item .comment-content .comment-course a:hover,
 .comment .comment-list .comment-item .comment-content .comment-course a:hover {
   color: #1c536f;
 }
+.program-comment .comment-list .comment-item .comment-content .comment-value,
 .comment .comment-list .comment-item .comment-content .comment-value {
   line-height: 1.6;
   padding: 5px 0;
@@ -519,15 +542,18 @@ main .banner-fourth .banner-item {
   color: #333;
   margin-bottom: 0;
 }
+.program-comment .comment-list .comment-item .comment-content .comment-action,
 .comment .comment-list .comment-item .comment-content .comment-action {
   margin-right: 20px;
   cursor: pointer;
   padding: 1px 6px;
 }
+.program-comment .comment-list .comment-item .comment-content .comment-action i,
 .comment .comment-list .comment-item .comment-content .comment-action i {
   font-size: 18px;
   margin-right: 4px;
 }
+.program-comment .comment-list .comment-item .comment-content .comment-action a,
 .comment .comment-list .comment-item .comment-content .comment-action a {
   color: red;
   padding: 0;
