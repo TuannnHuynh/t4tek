@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/rest.css">
+    <link rel="stylesheet" href="public/css/detail-short.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <title>Chi tiết khoá học ngắn hạn - T4Tek</title>
+</head>
+
+<body>
+    <header class="pt-1 pt-xxl-0">
+        <nav class="navbar navbar-expand-xxl">
+            <div class="container-fluid container-xxl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-navbar"
+                    aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a class="navbar-brand d-xxl-none" href="index.html">T4Tek</a>
+                <div class="d-none d-xxl-flex align-items-xxl-center">
+                    <a class="navbar-brand me-4" href="index.html">T4Tek</a>
+                    <ul class="navbar navbar-nav d-none d-xxl-flex ms-4">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link">
+                                <i class=" fa-solid fa-book me-1"></i>Các khoá học<i
+                                    class="ms-1 fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu lesson" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/khoa-hoc-ngan.html">Khóa ngắn hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa dài hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa video</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa trẻ em 8 - 17 tuổi</a></li>
+                                <li><a class="dropdown-item" href="#">Tất cả khóa học</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-4">
+                                <i class="fa-solid fa-location-dot me-1"></i>Địa điểm học<i
+                                    class="fa-solid fa-angle-down ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu location">
+                                <li><a class="dropdown-item" href="#">TP.Hồ Chí Minh</a></li>
+                                <li><a class="dropdown-item" href="#">Hà Nội</a></li>
+                                <li><a class="dropdown-item" href="#">Remote Teaching</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/bai-viet.html"><i class="me-1 fa-regular fa-file-lines"></i>Bài
+                                viết</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="cart d-xxl-none">
+                    <a href="">
+                        <span><i class="fa-solid fa-cart-shopping"></i></span>
+                        <span class="cart-quantity">0</span>
+                    </a>
+                </div>
+                <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="top-navbar">
+                    <div class="offcanvas-header d-flex justify-content-between align-items-center">
+                        <h2 class="p-2">T4Tek</h2>
+                        <button class="p-2" type="button" data-bs-toggle="offcanvas"><i
+                                class="fa-solid fa-x"></i></button>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class=" fa-solid fa-book me-2"></i>Các khoá học<i
+                                    class="float-end mt-2 fs-6 fa-solid fa-plus"></i>
+                            </a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="khoa-hoc-ngan.html">Khóa ngắn hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa dài hạn</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa video</a></li>
+                                <li><a class="dropdown-item" href="#">Khóa trẻ em 8 - 17 tuổi</a></li>
+                                <li><a class="dropdown-item" href="#">Tất cả khóa học</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-location-dot me-2"></i>Địa điểm học<i
+                                    class="float-end mt-2 fs-6 fa-solid fa-plus"></i>
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item" href="#">TP.Hồ Chí Minh</a></li>
+                                <li><a class="dropdown-item" href="#">Hà Nội</a></li>
+                                <li><a class="dropdown-item" href="#">Remote Teaching</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="me-2 fa-regular fa-file-lines"></i>Bài viết</a>
+                        </li>
+                        <a href="tao-tai-khoan.html" class="create"><i class="fa-solid fa-user-plus"></i>Tạo tài
+                            khoản</a>
+                        <a href="/login.html" class="login"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng
+                            nhập</a>
+                        <div class="search-offcanvas">
+                            <form action="" class="d-flex">
+                                <input type="text" placeholder="Tìm kiếm khoá học ...">
+                                <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="d-none justify-content-xxl-around d-xxl-flex">
+                    <div class="search d-flex me-4">
+                        <div class="input-group">
+                            <form action="">
+                                <input type="text" placeholder="Tìm kiếm khoá học ...">
+                                <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="group d-flex align-items-center ms-4">
+                        <div class="login">
+                            <a class="me-4" href="login.html"><i
+                                    class="me-1 fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</a>
+                        </div>
+                        <div class="create-user">
+                            <a class="me-4" href="tao-tai-khoan.html"><i class="me-1 fa-solid fa-user-plus"></i>Tạo tài
+                                khoản</a>
+                        </div>
+                        <div class="cart">
+                            <a href="">
+                                <span><i class="fa-solid fa-cart-shopping"></i></span>
+                                <span class="cart-quantity">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="course-detail">
+            <div class="container">
+                <nav class="detail-link" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/index.html"><i class="fa-solid fa-house"></i></a></a></li>
+                        <li class="breadcrumb-item"><a href="/khoa-hoc-ngan.html">Khoá học ngắn</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Khóa học Kỹ Xảo After Effects VFX
+                            Compositing</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <section class="course-title">
+            <div class="container-xsmall-615">
+                <h1 class="text-center">Khóa học Kỹ Xảo After Effects VFX Compositing</h1>
+            </div>
+        </section>
+        <section class="course-thumbnail">
+            <div class="container-xsmall-615">
+                <img src="/public/img/khoa-hoc-ngan-han/hinh1.jpg" alt="">
+            </div>
+        </section>
+        <section class="course-calendar">
+            <div class="container-xsmall-615">
+                <h2 class="text-center">Lịch khai giảng</h2>
+                <div class="location">
+                    <div class="items">
+                        <label class="item btn-animate active">
+                            <input type="radio" hidden name="location" value="5">Remote Teaching
+                            <div class="tick">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </label>
+                        <label class="item ms-0 btn-animate">
+                            <input type="radio" hidden name="location" value="3">TP.Hồ Chí Minh
+                            <div class="tick">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </label>
+                        <label class="item btn-animate">
+                            <input type="radio" hidden name="location" value="4">Hà Nội
+                            <div class="tick">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-body">
+                        <div class="course-info">
+                            <p class="title fw-bold fs-5">Lớp: 25RK17H - Remote</p>
+                            <p><i class="me-1 fa-solid fa-calendar"></i>Khai giảng ngày:<span
+                                    class="fw-bolder ms-1">24/02/2025</span></p>
+                            <p class="none-icon">Giờ học:<span class="fw-bolder ms-1">19:00 - 21:30</span></p>
+                            <p class="none-icon">Lịch học:<span class="fw-bolder ms-1">Thứ 2, Thứ 6</span></p>
+                            <p><i class="me-1 fa-solid fa-user"></i>Giảng viên:<span class="fw-bolder ms-1">Nguyễn Viết
+                                    Hoàng</span></p>
+                            <p>
+                                <i class="me-1 fa-solid fa-book-open"></i>Thời lượng:<span class="fw-bolder ms-1">16
+                                    buổi
+                                    học
+                                </span>
+                            </p>
+                            <p><i class="me-1 fa-solid fa-chart-simple"></i>Trình độ:<span class="fw-bolder ms-1">Nâng
+                                    cao</span>
+                            </p>
+                            <p><i class="me-1 fa-solid fa-dollar-sign"></i>Học phí:<span
+                                    class="sale-price fw-bolder ms-1">5,900,000<u>đ</u></span>
+                            </p>
+                            <p><i class="me-1 fa-solid fa-location-dot"></i>Địa điểm:<span class="fw-bolder ms-1">Học
+                                    trực
+                                    tuyến với
+                                    giảng viên qua Zoom/ Meet/ Classin...</span></p>
+                            <div class="course-register">
+                                <button class="btn-register offline btn-animate">
+                                    <span class="main-text d-block">Đặt chỗ học ngay</span>
+                                    <span class="description d-block">Khai giảng ngày 24/02/2025</span>
+                                </button>
+                                <button class="btn-register installment btn-animate">
+                                    Trả góp học phí
+                                </button>
+                            </div>
+
+                            <p style="line-height: normal">Hỗ trợ thư viện video bài giảng. Giúp bạn sở hữu trọn vẹn
+                                kiến
+                                thức dù có vắng học. &nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-alert d-none">
+                    <div class="alert text-center">
+                        <div class="content">
+                            <i class="d-block fs-4 fa-solid fa-circle-info"></i>
+                            <span>
+                                Sắp có lịch mới </br>
+                                Liên hệ Keyframe để được hỗ trợ </br>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="course-description">
+            <div class="container-xsmall-615">
+                <div class="header">
+                    <h2 class="title text-center">Mô tả Khóa học Kỹ Xảo After Effects VFX Compositing</h2>
+                </div>
+                <div class="content">
+                    <div class="content-body">
+                        <h4>Tham gia Khoá Học Kỹ Xảo After Effects VFX Compositing sẽ giúp bạn hiểu rõ về quy trình làm
+                            VFX cho phim.</h4>
+                        <ul>
+                            <li>Nắm vững phương pháp và thực hiện được các kỹ thuật gia công VFX thường gặp hiện nay
+                                bằng After Effects.</li>
+                            <li>Có được mindset và tự mình tư duy được cách làm ra các hiệu ứng VFX phù hợp với thước
+                                phim khác nhau.</li>
+                            <li>Cùng nhiều kiến thức và mẹo làm việc độc đáo khi thực hiện các Project VFX thực tế bằng
+                                After Effects được chia sẻ xuyên suốt khóa học.</li>
+                            <li>Chi tiết bài học và các kiến thức giảng dạy trong khóa học vui lòng xem thêm ở mục
+                                <strong>Giáo trình</strong>.
+                            </li>
+                        </ul>
+                        <p>
+                            *Cùng xem một tác phẩm ứng dụng các kiến thức có trong khóa học Kỹ Xảo After Effect VFX do
+                            giảng viên Đoàn Hoàng Kiệt tham gia thực hiện.
+                        </p>
+                        <div class="video">
+                            <iframe src="https://player.vimeo.com/video/344994864?title=0&amp;byline=0&amp;portrait=0"
+                                allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                        <h4 class="mt-0 mt-sm-4">Khoá Học Kỹ Xảo After Effects VFX Compositing phù hợp phù hợp với những
+                            ai?
+                        </h4>
+                        <ul>
+                            <li>
+                                <strong>Khoá Học Kỹ Xảo After Effects VFX Compositing</strong> dành cho những ai đã có
+                                nền tảng về After
+                                Effects muốn nâng cao kỹ năng xử lý kỹ xảo VFX bằng After Effects.
+                            </li>
+                            <li>
+                                Khóa học yêu cầu học viên biết sử dụng phần mềm After Effects trước khi tham gia. Nếu
+                                bạn là người mới hoàn toàn, bạn có thể học khóa <strong>After Effect Hiệu Ứng
+                                    Motion</strong> dưới đây
+                                trước khi tham gia khóa học Kỹ Xảo VFX này.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="course-teacher">
+            <div class="container">
+                <div class="header-teacher">
+                    <h2 class="title text-center">Giảng viên</h2>
+                </div>
+                <div class="row content-teacher">
+                    <div class="col-md-3 d-md-block d-none"></div>
+                    <div class="col-md-6 content">
+                        <div class="info-teacher">
+                            <div class="subnav">
+                                <a href="">
+                                    <img src="public/img/khoa-hoc-ngan-han/hinh2.jpg" alt="">
+                                    <p class="text-center">Nguyễn Viết Hoàng</p>
+                                </a>
+                            </div>
+                            <div class="introduction">
+                                <p class="teacher">
+                                    GV Nguyễn Viết Hoàng hiện đang là VFX Compositor, có kinh nghiệm làm việc với
+                                    After Effect hơn 5 năm trong vai trò hậu kì các sản phẩm Film/TVC/MV. Từng làm
+                                    việc/ hợp tác tại các studio như ElleVN, FatBeez, SpiceFX, Badclay,…
+                                </p>
+                                <div class="text-right">
+                                    <a href="">Xem thêm<i class="fa-solid fa-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-md-block d-none"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="first-column col-12 col-md-6 mb-4 mb-md-0">
+                    <h5>T4TEK MULTIMEDIA SCHOOL</h5>
+                    <p class="mb-2">
+                        Trụ sở chính: L18-11-13, Tầng 18 Tòa nhà Vincom Center Đồng Khởi, Số 72 Lê Thánh Tôn, Phường Bến
+                        Nghé, Quận 1, Thành phố Hồ Chí Minh.<br>
+                        Văn phòng: 287/54, Phường 2, Quận 8, Thành phố Hồ Chí Minh.<br>
+                        Giờ làm việc: Thứ 2 - Thứ 7: 8h00 - 17h00<br>
+                        Điện thoại: 0965643046<br>
+                        Email: contact@t4tek.co
+                    </p>
+                    <p><a href="">Chính sách bảo mật thông tin</a></p>
+                    <div class="img-bct">
+                        <img src="https://keyframe.vn/img/dathongbao.png" alt="">
+                    </div>
+                </div>
+                <div class="second-column col-12 col-md-3">
+                    <h5>THÔNG TIN</h5>
+                    <ul>
+                        <li><a href="">Lịch khai giảng</a></li>
+                        <li><a href="">Giảng viên là ai?</a></li>
+                        <li><a href="">Tác phẩm học viên</a></li>
+                        <li><a href="">Cảm nhận từ học viên</a></li>
+                        <li><a href="">Giới thiệu về T4Tek</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="third-column col-12 col-md-3">
+                    <h5>FOLLOW T4TEK</h5>
+                    <ul>
+                        <li><a href=""><img src="https://keyframe.vn/img/facebook-f-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/youtube-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/instagram-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/tiktok-brands-48.svg"></a></li>
+                        <li><a href=""><img src="https://keyframe.vn/img/behance-brands-48.svg"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="public/js/detail-short.js"></script>
+<script src="public/js/main.js"></script>
+
+</html>
