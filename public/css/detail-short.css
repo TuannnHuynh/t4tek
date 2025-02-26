@@ -511,4 +511,34 @@ h2 {
   line-height: 22px;
   padding: 10px 20px;
   background-color: #22cc9d;
+}
+
+.course-faq {
+  padding: 30px 0;
+}
+.course-faq .faq-content .content {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 10px;
+}
+.course-faq .faq-content .content ul li {
+  border-bottom: 1px solid #999;
+  padding: 22px 0;
+  position: relative;
+}
+.course-faq .faq-content .content ul li:nth-last-child(1) {
+  border-bottom: none;
+}
+.course-faq .faq-content .content ul li .title-content {
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+}
+.course-faq .faq-content .content ul li .main-content {
+  margin-top: 20px;
+  display: none;
+}
+.course-faq .faq-content .content ul li .main-content p {
+  color: #666;
+  margin: 0 0 10px 0;
 }/*# sourceMappingURL=detail-short.css.map */
